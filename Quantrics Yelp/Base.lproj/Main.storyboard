@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Hps-hC-spp">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Home-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="BusinessListViewController" customModule="Quantrics_Yelp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="HVh-hE-cJn">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" textLabel="bby-qf-ece" style="IBUITableViewCellStyleDefault" id="Lzn-QH-ag2">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Lzn-QH-ag2" id="yzE-K0-scm">
+                                            <rect key="frame" x="0.0" y="0.0" width="383" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="bby-qf-ece">
+                                                    <rect key="frame" x="20" y="0.0" width="355" height="43.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="vIW-Mk-6hC"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="PjG-zV-NXE"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="HVh-hE-cJn" secondAttribute="bottom" id="1Wm-u7-7uV"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="HVh-hE-cJn" secondAttribute="trailing" id="1hJ-ZW-KaW"/>
+                            <constraint firstItem="HVh-hE-cJn" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="dAC-xL-JcS"/>
+                            <constraint firstItem="HVh-hE-cJn" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="t7W-bM-QLo"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Home" id="zci-6U-Ui1">
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="near-me-icon" id="vtB-gB-aFi">
+                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <action selector="didTapSortButton:" destination="BYZ-38-t0r" id="dCe-Ah-z0L"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="sortButton" destination="vtB-gB-aFi" id="iMD-bK-tZc"/>
+                        <outlet property="tableView" destination="HVh-hE-cJn" id="UpL-kN-nlC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1047.8260869565217" y="125.89285714285714"/>
+        </scene>
+        <!--Details-->
+        <scene sceneID="Xv5-ZU-bqb">
+            <objects>
+                <viewController storyboardIdentifier="DetailViewController" id="kcj-UW-vat" customClass="BusinessDetailViewController" customModule="Quantrics_Yelp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="nA3-hq-YJc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="photo" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="kx6-aj-j5z">
+                                <rect key="frame" x="0.0" y="45" width="414" height="197.5"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="Bu4-o5-fBm"/>
+                                </constraints>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="top" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="l3X-8o-mGb">
+                                <rect key="frame" x="12" y="264" width="390" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" placeholder="YES" id="cWk-Ot-abn"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="100" id="hzl-AN-VgS"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="l3X-8o-mGb" firstAttribute="leading" secondItem="6zL-Y4-1kF" secondAttribute="leading" constant="12" id="0VA-5g-eik"/>
+                            <constraint firstItem="kx6-aj-j5z" firstAttribute="top" secondItem="6zL-Y4-1kF" secondAttribute="top" id="Mxp-Ul-9B2"/>
+                            <constraint firstItem="l3X-8o-mGb" firstAttribute="top" secondItem="kx6-aj-j5z" secondAttribute="bottom" constant="20" id="Xl8-e2-Gmv"/>
+                            <constraint firstItem="kx6-aj-j5z" firstAttribute="leading" secondItem="6zL-Y4-1kF" secondAttribute="leading" id="ZZL-SC-dqX"/>
+                            <constraint firstItem="6zL-Y4-1kF" firstAttribute="trailing" secondItem="kx6-aj-j5z" secondAttribute="trailing" id="fcK-Lc-5uf"/>
+                            <constraint firstItem="l3X-8o-mGb" firstAttribute="trailing" secondItem="6zL-Y4-1kF" secondAttribute="trailing" constant="-12" id="i3Y-Wh-wuc"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6zL-Y4-1kF"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Details" id="Opw-8c-kaC">
+                        <barButtonItem key="backBarButtonItem" title="BB" id="teb-Jm-PaM"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="businessImage" destination="kx6-aj-j5z" id="rD1-qi-6LJ"/>
+                        <outlet property="stackView" destination="l3X-8o-mGb" id="7fl-et-TiW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="I57-GU-MX8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1047.8260869565217" y="884.59821428571422"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="f9M-v0-jNJ">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Hps-hC-spp" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="bo6-nH-dHz">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="xE6-jY-IdC"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OdF-5R-HDk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="125.89285714285714"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="near-me-icon" width="33.333332061767578" height="33.333332061767578"/>
+        <image name="photo" catalog="system" width="64" height="46"/>
+    </resources>
+</document>
