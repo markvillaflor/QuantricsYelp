@@ -42,6 +42,21 @@ class BusinessListViewModel {
         return businesses?[indexPath.row].name ?? ""
     }
     
+    func detailTextLabelFor(indexPath: IndexPath) -> String {
+        switch sortOrder {
+        case .nearest:
+            let distance = businesses?[indexPath.row].distance ?? 0
+            let distanceInKilometers = String(format: "%.2f km", (distance / 1000))
+            return distanceInKilometers
+        case .ratings:
+            if let rating = businesses?[indexPath.row].rating {
+                return "\(rating.description) ⭐️"
+            } else {
+                return ""
+            }
+        }
+    }
+    
     func businessFor(indexPath: IndexPath) -> Business? {
         return businesses?[indexPath.row]
     }

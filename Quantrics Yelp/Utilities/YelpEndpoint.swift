@@ -38,14 +38,16 @@ enum YelpEndpoint: String {
                 params.category == .location {
                 let queryItem = URLQueryItem(name: "location", value: term)
                 queryItems.append(queryItem)
+            } else {
+                if let latitude = params.userCoordinates?.latitude.description,
+                    let longitude = params.userCoordinates?.longitude.description {
+                    let latitudeQueryItem = URLQueryItem(name: "latitude", value: latitude)
+                    queryItems.append(latitudeQueryItem)
+                    let longitudeQueryItem = URLQueryItem(name: "longitude", value: longitude)
+                    queryItems.append(longitudeQueryItem)
+                }
             }
-            if let latitude = params.userCoordinates?.latitude.description,
-                let longitude = params.userCoordinates?.longitude.description {
-                let latitudeQueryItem = URLQueryItem(name: "latitude", value: latitude)
-                queryItems.append(latitudeQueryItem)
-                let longitudeQueryItem = URLQueryItem(name: "longitude", value: longitude)
-                queryItems.append(longitudeQueryItem)
-            }
+            
             let offsetQueryItem = URLQueryItem(name: "offset", value: params.offset.description)
             queryItems.append(offsetQueryItem)
             let limitQueryItem = URLQueryItem(name: "limit", value: "20")
@@ -71,7 +73,16 @@ enum YelpEndpoint: String {
             urlComponents.path = self.rawValue.replacingOccurrences(of: "{id}", with: id)
             url = urlComponents.url
         case .reviews:
-            url = URL(string: "")
+            guard let params = params as? BusinessDetailsParams,
+                let id = params.businessId else {
+                os_log("Invalid params")
+                return nil
+            }
+            var urlComponents = URLComponents()
+            urlComponents.scheme = YelpEndpoint.scheme
+            urlComponents.host = YelpEndpoint.host
+            urlComponents.path = self.rawValue.replacingOccurrences(of: "{id}", with: id)
+            url = urlComponents.url
         }
         return url
     }

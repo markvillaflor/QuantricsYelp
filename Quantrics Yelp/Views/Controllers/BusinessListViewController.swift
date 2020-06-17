@@ -65,6 +65,7 @@ extension BusinessListViewController: UITableViewDataSource, UITableViewDelegate
             return UITableViewCell()
         }
         cell.textLabel?.text = viewModel.businessNameFor(indexPath: indexPath)
+        cell.detailTextLabel?.text = viewModel.detailTextLabelFor(indexPath: indexPath)
         return cell
     }
     

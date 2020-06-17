@@ -9,3 +9,20 @@
 struct Category: Decodable {
     var title: String?
 }
+
+// new models
+
+struct BusinessReviews: Decodable {
+    var reviews: [Review]?
+}
+
+struct Review: Decodable {
+    var rating: Float?
+    var text: String?
+    var user: User?
+}
+
+struct User: Decodable {
+    var image_url: String?
+    var name: String?
+}

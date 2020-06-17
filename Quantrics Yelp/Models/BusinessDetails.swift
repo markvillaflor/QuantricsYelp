@@ -13,4 +13,10 @@ struct BusinessDetails: Decodable {
     var rating: Float?
     var location: Location?
     var display_phone: String?
+    var coordinates: Coordinates?
+}
+
+struct Coordinates: Decodable {
+    var latitude: Float?
+    var longitude: Float?
 }

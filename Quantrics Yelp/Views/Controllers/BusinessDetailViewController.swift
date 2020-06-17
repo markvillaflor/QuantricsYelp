@@ -15,21 +15,41 @@ class BusinessDetailViewController: UIViewController {
     
     var business: Business? = nil
     let service = ServiceRequestManager()
-    var viewModel = BusinessDetailViewModel(model: BusinessDetails())
+    var viewModel = BusinessDetailViewModel(model: BusinessDetails(), reviews: BusinessReviews())
+    private var businessDetails: BusinessDetails?
+    private var businessReviews: BusinessReviews?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         title = business?.name ?? ""
+        requestBusinessDetails()
+    }
+    
+    @IBAction func didTapMaps(_ sender: Any) {
+        viewModel.didTapMaps()
+    }
+    
+    private func requestBusinessDetails() {
         service.businessDetailsRequest(id: business?.id) { [weak self] value in
-            self?.setUpView(businessDetails: value)
+            self?.businessDetails = value
+            self?.requestBusinessReviews()
         }
     }
     
-    private func setUpView(businessDetails: BusinessDetails?) {
-        guard let businessDetails = businessDetails else {
+    private func requestBusinessReviews() {
+        service.businessReviewsRequest(id: business?.id) { [weak self] value in
+            self?.businessReviews = value
+            self?.setUpView()
+        }
+    }
+    
+    private func setUpView() {
+        guard let businessDetails = businessDetails,
+            let businessReviews = businessReviews else {
             return
         }
-        viewModel = BusinessDetailViewModel(model: businessDetails)
+        
+        viewModel = BusinessDetailViewModel(model: businessDetails, reviews: businessReviews)
         viewModel.setUp(with: self)
         if let imageURLString = viewModel.imageUrl,
             !imageURLString.isEmpty {

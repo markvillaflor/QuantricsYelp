@@ -9,4 +9,6 @@
 struct Business: Decodable {
     var name: String?
     var id: String?
+    var distance: Float?
+    var rating: Float?
 }

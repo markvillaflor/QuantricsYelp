@@ -42,6 +42,19 @@ class ServiceRequestManager {
         }
     }
     
+    func businessReviewsRequest(id: String?, completion: @escaping (_ result: BusinessReviews?) -> Void) {
+        let params = BusinessDetailsParams(businessId: id)
+        guard let url = YelpEndpoint.reviews.createUrl(with: params) else {
+            return completion(nil)
+        }
+        var request = URLRequest(url: url)
+        request.addValue(YelpEndpoint.apiKey, forHTTPHeaderField: Constants.authorization)
+        
+        seviceRequest(request: request, responseType: BusinessReviews.self) { value in
+            completion(value)
+        }
+    }
+    
     private func seviceRequest<T: Decodable>(request: URLRequest, responseType: T.Type, completion: @escaping (_ result: T?) -> Void) {
         cleanDataTask()
         dataTask = session.dataTask(with: request as URLRequest, completionHandler: { data, response, error in

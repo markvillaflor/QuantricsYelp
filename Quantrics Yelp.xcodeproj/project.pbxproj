@@ -21,6 +21,8 @@
 		894A50022496ABDE004F0EB1 /* YelpEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894A50012496ABDE004F0EB1 /* YelpEndpoint.swift */; };
 		894A50042496AC19004F0EB1 /* BusinessSearchParams.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894A50032496AC19004F0EB1 /* BusinessSearchParams.swift */; };
 		897E7F0B24937612006EDB76 /* BusinessDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 897E7F0A24937611006EDB76 /* BusinessDetailViewController.swift */; };
+		89C47149249934CB00584117 /* ReviewCardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 89C47148249934CB00584117 /* ReviewCardView.xib */; };
+		89C4714B24993D3700584117 /* ReviewCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89C4714A24993D3700584117 /* ReviewCardView.swift */; };
 		89F50C8F249775DC00E0489E /* RequestParams.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89F50C8E249775DC00E0489E /* RequestParams.swift */; };
 		89F50C91249775F000E0489E /* BusinessDetailsParams.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89F50C90249775F000E0489E /* BusinessDetailsParams.swift */; };
 		89F752022490FD13003B5408 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89F752012490FD13003B5408 /* AppDelegate.swift */; };
@@ -46,6 +48,8 @@
 		894A50012496ABDE004F0EB1 /* YelpEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YelpEndpoint.swift; sourceTree = "<group>"; };
 		894A50032496AC19004F0EB1 /* BusinessSearchParams.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessSearchParams.swift; sourceTree = "<group>"; };
 		897E7F0A24937611006EDB76 /* BusinessDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessDetailViewController.swift; sourceTree = "<group>"; };
+		89C47148249934CB00584117 /* ReviewCardView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReviewCardView.xib; sourceTree = "<group>"; };
+		89C4714A24993D3700584117 /* ReviewCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewCardView.swift; sourceTree = "<group>"; };
 		89F50C8E249775DC00E0489E /* RequestParams.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestParams.swift; sourceTree = "<group>"; };
 		89F50C90249775F000E0489E /* BusinessDetailsParams.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessDetailsParams.swift; sourceTree = "<group>"; };
 		89F751FE2490FD13003B5408 /* Quantrics Yelp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Quantrics Yelp.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -88,6 +92,8 @@
 			isa = PBXGroup;
 			children = (
 				894A50002496ABBC004F0EB1 /* Controllers */,
+				89C47148249934CB00584117 /* ReviewCardView.xib */,
+				89C4714A24993D3700584117 /* ReviewCardView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -215,6 +221,7 @@
 			files = (
 				89F7520E2490FD16003B5408 /* LaunchScreen.storyboard in Resources */,
 				89F7520B2490FD16003B5408 /* Assets.xcassets in Resources */,
+				89C47149249934CB00584117 /* ReviewCardView.xib in Resources */,
 				89F752092490FD13003B5408 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -228,6 +235,7 @@
 			files = (
 				894A4FF52496AA40004F0EB1 /* SortOrder.swift in Sources */,
 				89F752062490FD13003B5408 /* BusinessListViewController.swift in Sources */,
+				89C4714B24993D3700584117 /* ReviewCardView.swift in Sources */,
 				894A4FF72496AAE6004F0EB1 /* ImageView+Utilities.swift in Sources */,
 				8945B2872492558C00550CC2 /* ServiceRequestManager.swift in Sources */,
 				894A4FF32496AA28004F0EB1 /* SearchCategory.swift in Sources */,
