@@ -15,8 +15,3 @@ struct BusinessDetails: Decodable {
     var display_phone: String?
     var coordinates: Coordinates?
 }
-
-struct Coordinates: Decodable {
-    var latitude: Float?
-    var longitude: Float?
-}

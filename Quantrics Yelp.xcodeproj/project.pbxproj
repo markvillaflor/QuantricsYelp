@@ -21,6 +21,10 @@
 		894A50022496ABDE004F0EB1 /* YelpEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894A50012496ABDE004F0EB1 /* YelpEndpoint.swift */; };
 		894A50042496AC19004F0EB1 /* BusinessSearchParams.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894A50032496AC19004F0EB1 /* BusinessSearchParams.swift */; };
 		897E7F0B24937612006EDB76 /* BusinessDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 897E7F0A24937611006EDB76 /* BusinessDetailViewController.swift */; };
+		89BA4571249BADAE00153C01 /* Coordinates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89BA4570249BADAE00153C01 /* Coordinates.swift */; };
+		89BA4573249BADCE00153C01 /* BusinessReviews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89BA4572249BADCE00153C01 /* BusinessReviews.swift */; };
+		89BA4575249BADE000153C01 /* Review.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89BA4574249BADE000153C01 /* Review.swift */; };
+		89BA4577249BADF400153C01 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89BA4576249BADF400153C01 /* User.swift */; };
 		89C47149249934CB00584117 /* ReviewCardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 89C47148249934CB00584117 /* ReviewCardView.xib */; };
 		89C4714B24993D3700584117 /* ReviewCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89C4714A24993D3700584117 /* ReviewCardView.swift */; };
 		89F50C8F249775DC00E0489E /* RequestParams.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89F50C8E249775DC00E0489E /* RequestParams.swift */; };
@@ -48,6 +52,10 @@
 		894A50012496ABDE004F0EB1 /* YelpEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YelpEndpoint.swift; sourceTree = "<group>"; };
 		894A50032496AC19004F0EB1 /* BusinessSearchParams.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessSearchParams.swift; sourceTree = "<group>"; };
 		897E7F0A24937611006EDB76 /* BusinessDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessDetailViewController.swift; sourceTree = "<group>"; };
+		89BA4570249BADAE00153C01 /* Coordinates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinates.swift; sourceTree = "<group>"; };
+		89BA4572249BADCE00153C01 /* BusinessReviews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessReviews.swift; sourceTree = "<group>"; };
+		89BA4574249BADE000153C01 /* Review.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Review.swift; sourceTree = "<group>"; };
+		89BA4576249BADF400153C01 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		89C47148249934CB00584117 /* ReviewCardView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReviewCardView.xib; sourceTree = "<group>"; };
 		89C4714A24993D3700584117 /* ReviewCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewCardView.swift; sourceTree = "<group>"; };
 		89F50C8E249775DC00E0489E /* RequestParams.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestParams.swift; sourceTree = "<group>"; };
@@ -106,6 +114,10 @@
 				894A4FFA2496AB46004F0EB1 /* BusinessDetails.swift */,
 				894A4FFC2496AB60004F0EB1 /* Location.swift */,
 				894A4FFE2496AB73004F0EB1 /* Category.swift */,
+				89BA4576249BADF400153C01 /* User.swift */,
+				89BA4570249BADAE00153C01 /* Coordinates.swift */,
+				89BA4572249BADCE00153C01 /* BusinessReviews.swift */,
+				89BA4574249BADE000153C01 /* Review.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -240,8 +252,10 @@
 				8945B2872492558C00550CC2 /* ServiceRequestManager.swift in Sources */,
 				894A4FF32496AA28004F0EB1 /* SearchCategory.swift in Sources */,
 				894A4FF12496A980004F0EB1 /* BusinessListViewModel.swift in Sources */,
+				89BA4575249BADE000153C01 /* Review.swift in Sources */,
 				894A4FFD2496AB60004F0EB1 /* Location.swift in Sources */,
 				8945B2842492155D00550CC2 /* BusinessSearch.swift in Sources */,
+				89BA4571249BADAE00153C01 /* Coordinates.swift in Sources */,
 				894A50022496ABDE004F0EB1 /* YelpEndpoint.swift in Sources */,
 				897E7F0B24937612006EDB76 /* BusinessDetailViewController.swift in Sources */,
 				89F752022490FD13003B5408 /* AppDelegate.swift in Sources */,
@@ -251,6 +265,8 @@
 				894A50042496AC19004F0EB1 /* BusinessSearchParams.swift in Sources */,
 				89F50C91249775F000E0489E /* BusinessDetailsParams.swift in Sources */,
 				89F752042490FD13003B5408 /* SceneDelegate.swift in Sources */,
+				89BA4577249BADF400153C01 /* User.swift in Sources */,
+				89BA4573249BADCE00153C01 /* BusinessReviews.swift in Sources */,
 				894A4FEF2496A95A004F0EB1 /* BusinessDetailViewModel.swift in Sources */,
 				89F50C8F249775DC00E0489E /* RequestParams.swift in Sources */,
 			);
